@@ -1,0 +1,10 @@
+--- mydumper-0.2.3/cmake/modules/FindMySQL.cmake.orig	2011-07-15 08:15:30.000000000 -0500
++++ mydumper-0.2.3/cmake/modules/FindMySQL.cmake	2011-07-15 08:16:14.000000000 -0500
+@@ -13,6 +13,7 @@
+ # Redistribution and use is allowed according to the terms of the BSD license.
+ 
+ if(UNIX) 
++    set(CMAKE_FIND_LIBRARY_SUFFIXES ".so")
+     set(MYSQL_CONFIG_PREFER_PATH "$ENV{MYSQL_HOME}/bin" CACHE FILEPATH
+         "preferred path to MySQL (mysql_config)")
+     find_program(MYSQL_CONFIG mysql_config

@@ -1,0 +1,4 @@
+*SRPMS/*.rpm
+*RPMS
+*BUILD
+*BUILDROOT
