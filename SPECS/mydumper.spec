@@ -1,6 +1,6 @@
 Name:		mydumper	
 Version:	0.2.3
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	A high-performance multi-threaded backup toolset for MySQL and Drizzle
 
 Group:		Applications/Databases	
@@ -11,7 +11,6 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 Patch0:		mydumper_cmake_suffix.patch
 
 BuildRequires:	glib2-devel, zlib-devel, pcre-devel, mysql-devel, cmake	
-Requires:	mysql
 
 %description
 Mydumper (aka. MySQL Data Dumper) is a high-performance multi-threaded 
@@ -39,11 +38,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc CMakeLists.txt README
+%doc README
 %{_bindir}/mydumper
 %{_bindir}/myloader
 
 
 %changelog
+* Fri Jul 15 2011 Jeffrey Ness <jeffrey.ness@rackspace.com> - 0.2.3-1
+- removing CMakeLists.txt from doc
+- removing Requires: mysql
+
 * Fri Jul 15 2011 Jeffrey Ness <jeffrey.ness@rackspace.com> - 0.2.3-1
 - initial build
