@@ -39,6 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
+%doc CMakeLists.txt README
 %{_bindir}/mydumper
 %{_bindir}/myloader
 
