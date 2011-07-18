@@ -1,7 +1,7 @@
 Name:		mydumper	
 Version:	0.2.3
 Release:	1%{?dist}
-Summary:	Mydumper is a high-performance multi-threaded backup toolset for MySQL and Drizzle
+Summary:	A high-performance multi-threaded backup toolset for MySQL and Drizzle
 
 Group:		Applications/Databases	
 License:	GPLv3	
@@ -14,10 +14,11 @@ BuildRequires:	glib2-devel, zlib-devel, pcre-devel, mysql-devel, cmake
 Requires:	mysql
 
 %description
-Mydumper (aka. MySQL Data Dumper) is a high-performance multi-threaded backup 
-(and restore) toolset for MySQL and Drizzle.  The main developers originally worked
-as Support Engineers at MySQL (one has moved to Facebook and another to SkySQL) 
-and this is how they would envisage mysqldump based on years of user feedback.
+Mydumper (aka. MySQL Data Dumper) is a high-performance multi-threaded 
+backup (and restore) toolset for MySQL and Drizzle.  The main developers 
+originally worked as Support Engineers at MySQL (one has moved to 
+Facebook and another to SkySQL) and this is how they would envisage mysqldump 
+based on years of user feedback.
 
 
 %prep
