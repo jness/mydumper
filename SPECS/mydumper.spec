@@ -1,6 +1,6 @@
 Name:		mydumper	
 Version:	0.2.3
-Release:	3%{?dist}
+Release:	2%{?dist}
 Summary:	A high-performance multi-threaded backup toolset for MySQL and Drizzle
 
 Group:		Applications/Databases	
@@ -11,9 +11,6 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 Patch0:		mydumper_cmake_suffix.patch
 
 BuildRequires:	glib2-devel, zlib-devel, pcre-devel, mysql-devel, cmake	
-
-# In order to create man pages and docs 
-BuildRequires:	python-sphinx
 
 %description
 Mydumper (aka. MySQL Data Dumper) is a high-performance multi-threaded 
@@ -47,11 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Tue Jul 19 2011 Jeffrey Ness <jeffrey.ness@rackspace.com> - 0.2.3-3
-- adding BuildRequires for python-sphinx, this should create
-  man pages as mentioned at 
-  https://answers.launchpad.net/mydumper/+question/165220
-
 * Fri Jul 15 2011 Jeffrey Ness <jeffrey.ness@rackspace.com> - 0.2.3-2
 - removing CMakeLists.txt from doc
 - removing Requires: mysql
