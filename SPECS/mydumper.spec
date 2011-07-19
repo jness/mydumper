@@ -37,8 +37,8 @@ based on years of user feedback.
 make %{?_smp_mflags}
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make install DESTDIR=$RPM_BUILD_ROOT
+rm -rf %{buildroot}
+make install DESTDIR=%{buildroot}
 
 # install our man pages
 %{__install} -p -d -m 0755 %{buildroot}%{_mandir}/man1/
@@ -46,7 +46,7 @@ make install DESTDIR=$RPM_BUILD_ROOT
 %{__install} -p -D -m 0644 %{SOURCE2} %{buildroot}%{_mandir}/man1/
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 
 %files
