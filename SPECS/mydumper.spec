@@ -41,6 +41,8 @@ based on years of user feedback.
 %setup -q -n %{name}-%{version}
 %patch0 -p1
 
+# on el6 we use python-sphinx10 from EPEL
+# so we need to patch the cmake Sphinx locator
 %if 0%{?rhel} > 6
 %patch1 -p1
 %endif
@@ -72,6 +74,8 @@ rm -rf %{buildroot}
 %{_mandir}/man1/mydumper.1.gz
 %{_mandir}/man1/myloader.1.gz
 
+# docs only exist if created via sphinx
+# this is el6 and fedora
 %if (0%{?rhel} > 6 || 0%{?fedora} > 12)
 %doc %{_docdir}/mydumper/
 %endif
