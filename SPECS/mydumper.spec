@@ -21,7 +21,7 @@ Patch1:         mydumper_cmake_sphinx.patch
 
 BuildRequires:  glib2-devel, zlib-devel, pcre-devel, mysql-devel, cmake
 
-%if 0%{?rhel} == 6
+%if 0%{?rhel} > 6
 BuildRequires:  python-sphinx10, python-docutils
 %endif
 
