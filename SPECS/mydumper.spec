@@ -41,7 +41,7 @@ based on years of user feedback.
 %setup -q -n %{name}-%{version}
 %patch0 -p1
 
-%if 0%{?rhel} == 6
+%if 0%{?rhel} > 6
 %patch1 -p1
 %endif
 
@@ -72,7 +72,7 @@ rm -rf %{buildroot}
 %{_mandir}/man1/mydumper.1.gz
 %{_mandir}/man1/myloader.1.gz
 
-%if (0%{?rhel} == 6 || 0%{?fedora} > 12)
+%if (0%{?rhel} > 6 || 0%{?fedora} > 12)
 %doc %{_docdir}/mydumper/
 %endif
 
