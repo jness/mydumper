@@ -1,0 +1,11 @@
+--- mydumper-0.2.3/cmake/modules/FindSphinx.cmake.orig  2011-07-20 18:46:29.052568450 -0500
++++ mydumper-0.2.3/cmake/modules/FindSphinx.cmake       2011-07-20 18:46:42.596599948 -0500
+@@ -19,7 +19,7 @@
+ # (To distribute this file outside of CMake, substitute the full
+ #  License text for the above reference.)
+ 
+-find_program(SPHINX_EXECUTABLE NAMES sphinx-build
++find_program(SPHINX_EXECUTABLE NAMES sphinx-1.0-build
+   HINTS
+   $ENV{SPHINX_DIR}
+   PATH_SUFFIXES bin
